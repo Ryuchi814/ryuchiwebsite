@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>りゅちーの公式サイト</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>りゅちー | 公式サイト</title>
+  <style>
+    body {
+      margin:0;
+      font-family: sans-serif;
+      background:#0b1220;
+      color:#f1f5f9;
+      line-height:1.6;
+    }
+    header {
+      background:#0f172a;
+      padding:12px 20px;
+      position:sticky;
+      top:0;
+    }
+    nav a {
+      color:white;
+      margin:0 10px;
+      text-decoration:none;
+    }
+    section {padding:50px 20px; max-width:900px; margin:auto;}
+    h1,h2 {margin-bottom:10px;}
+    .card {
+      background:#1e293b;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+    }
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#0f172a;
+      color:#94a3b8;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>りゅちーの公式サイト</h1>
-    <p class="catch">ようこそ！</p>
+    <nav>
+      <a href="#news">News</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#schedule">スケジュール</a>
+      <a href="#works">作品</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
   </header>
-  <main>
-    <section class="profile">
-      <h2>プロフィール</h2>
-      <img src="profile.jpg" alt="りゅちーの写真" class="profile-img" />
-      <p>
-        こんにちは、りゅちーです。<br>
-        ここは私の公式サイトです。<br>
-        プログラミングやクリエイティブな活動をしています。<br>
-      </p>
-    </section>
-    <section class="sns">
-      <h2>SNSリンク</h2>
-      <ul>
-        <li><a href="https://twitter.com/" target="_blank">Twitter（X）</a></li>
-        <li><a href="https://github.com/Ryuchi814" target="_blank">GitHub</a></li>
-        <!-- 必要に応じて他のSNSも追加してください -->
-      </ul>
-    </section>
-  </main>
+
+  <section id="hero">
+    <h1>りゅちー 公式サイト</h1>
+    <p>こんにちは！ここでは最新情報、活動予定、作品などを紹介します。</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <div class="card">
+      <h3>サイト公開</h3>
+      <p>2025-08-28 公式サイトを公開しました。</p>
+    </div>
+  </section>
+
+  <section id="profile">
+    <h2>プロフィール</h2>
+    <div class="card">
+      <p>りゅちーの自己紹介文をここに書いてね。</p>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h2>スケジュール</h2>
+    <div class="card">
+      <p>2025/09/15 イベント出演予定！</p>
+    </div>
+  </section>
+
+  <section id="works">
+    <h2>作品</h2>
+    <div class="card">
+      <p>代表作や動画リンクをここに追加してください。</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      <form action="mailto:you@example.com" method="post" enctype="text/plain">
+        <p><input type="text" name="name" placeholder="お名前" required style="width:100%;padding:8px"></p>
+        <p><input type="email" name="email" placeholder="メールアドレス" required style="width:100%;padding:8px"></p>
+        <p><textarea name="message" placeholder="お問い合わせ内容" rows="5" style="width:100%;padding:8px"></textarea></p>
+        <p><button type="submit">送信</button></p>
+      </form>
+    </div>
+  </section>
+
   <footer>
-    <small>&copy; 2025 りゅちー</small>
+    <p>© <span id="year"></span> りゅちー</p>
   </footer>
-</body>
-</html>
+
+  <script>
+    document.getElementById("year").
